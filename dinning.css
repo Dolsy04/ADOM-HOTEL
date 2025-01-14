@@ -1,0 +1,718 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: auto;
+}
+
+header .logo{
+    margin-left: 30px;
+}
+
+header .logo h1 a{
+    color: #232424;
+    text-decoration: none;
+    font: 500 30px 'poppins', sans-serif;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px;
+    background: whitesmoke;
+}
+header nav {
+    margin-right: 40PX;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+header nav ul li{
+    list-style: none;
+    margin-right: 20px;
+    position: relative;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: #232424;
+    transition: 2s ease;
+    font: 500 18px 'roboto';
+}
+header nav ul li a:hover{
+    color: blue;
+}
+.active-page{
+    color: blue;
+}
+.active-page::before{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: yellowgreen;
+    position: absolute;
+    bottom: -4px;
+    border-radius: 20px;
+}
+
+ header .bar{
+    display: none;
+    margin-right: 20px;
+}
+header .bar .bars{
+    width: 50px;
+    height: 3px;
+    background: white;
+    display: block;
+    margin-top: 10px;
+    transition: 1s ease;
+}
+header .bar .bars:nth-child(1){
+    margin-top: 0;
+}
+header .bar .bars:nth-child(1).active{
+    transform: translateY(16px) rotate(-40deg);
+}
+header .bar .bars:nth-child(2).active{
+    opacity: 0;
+}
+header .bar .bars:nth-child(3).active{
+    transform: translateY(-10px) rotate(40deg);
+}
+
+.hero-section{
+    width: 100%;
+    height: 300px;
+    background: url('/image/dinning.jpg') center / cover #0000009e;
+    background-blend-mode: multiply;
+    animation: heroSection 15s 5s infinite normal both;
+}
+@keyframes heroSection {
+    40%{
+        background: url('/image/dinnig-image-1.jpg') center / cover  #0000009e;
+        background-blend-mode: multiply;
+    }
+    80%{
+        background: url('/image/dinning-image-2.jpg') center / cover  #0000009e;
+        background-blend-mode: multiply;
+    }
+    100%{
+        background: url('/image/dinning.jpg') center / cover  #0000009e;
+        background-blend-mode: multiply;
+    }
+}
+.hero-section p{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 90%;
+    height: 100%;
+    color: whitesmoke;
+    margin-left: 40px;
+    font: 800 80px 'roboto',sans-serif;
+    letter-spacing: 2px;
+}
+
+/* ------Kitchen-staff------- */
+
+.kitchen-staff{
+    width: 100%;
+    background: whitesmoke;
+    padding-bottom: 30px;
+}
+.kitchen-staff .title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+}
+.kitchen-staff .title h2{
+    width: 100%;
+    text-align: center;
+    font: 800 30px 'roboto',sans-serif;
+    text-transform: uppercase;
+    color: green;
+    letter-spacing: 1px;
+}
+.kitchen-staff .staff-container{
+    width: 90%;
+    margin: 20px auto;
+}
+.kitchen-staff .staff-container .staff-list{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+.kitchen-staff .staff-container .staff-list .staff-item{
+    width: 100%;
+    min-width: 250px;
+    height: 280px;
+    background: #ff7b000e;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 10px;
+    scroll-snap-align: start;
+}
+.kitchen-staff .staff-container .staff-list::-webkit-scrollbar{
+    display: none;
+}
+.kitchen-staff .staff-container .staff-list .staff-item img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+.kitchen-staff .staff-container .staff-list .staff-item .staff-name-position{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.kitchen-staff .staff-container .staff-list .staff-item .staff-name-position p:nth-child(1){
+    font: 600 18px 'roboto';
+    background: #760808ab;
+    color: white;
+    padding: 8px 15px;
+}
+.kitchen-staff .staff-container .staff-list .staff-item .staff-name-position p:nth-child(2){
+    font: 400 18px 'roboto';
+}
+
+/* -------- best--sale--- */
+.best-meal{
+    width: 100%;
+    padding-bottom: 30px;
+}
+.best-meal .title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+}
+.best-meal .title h2{
+    width: 100%;
+    text-align: center;
+    font: 800 30px 'roboto',sans-serif;
+    text-transform: uppercase;
+    color: green;
+    letter-spacing: 1px;
+}
+.best-meal .best-sale-container .best-sale-item{
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+}
+.best-meal .best-sale-container .best-sale-item .best-sale-note{
+    width: 40%;
+}
+.best-meal .best-sale-container .best-sale-item .best-sale-note p{
+    font: 500 16px 'roboto';
+    line-height: 1.9;
+}
+.best-meal .best-sale-container .best-sale-item .best-sale-note p button{
+    margin-left: 10px;
+    padding: 8px 15px;
+    background: green;
+    border: none;
+    outline: none;
+    color: white;
+    font: 600 16px 'roboto';
+}
+.best-meal .best-sale-container .best-sale-item .best-sale-image img{
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ---------reservation-list------- */
+.reservation{
+    width: 100%;
+    background: whitesmoke;
+    padding-bottom: 30px;
+}
+.reservation .reservation-title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+.reservation .reservation-title h2{
+    width: 100%;
+    text-align: center;
+    font: 800 30px 'roboto',sans-serif;
+    text-transform: uppercase;
+    color: green;
+    letter-spacing: 1px;
+}
+.reservation-list{
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+}
+.reservation-list .reserved-note{
+    width: 50%;
+}
+.reservation-list .reserved-note ul li{
+    margin: 10px 0 0 10px;
+    font: 400 16px 'roboto';
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+.reservation-list .reserved-note ul li:last-child{
+    margin-bottom: 20px;
+}
+.reservation-list .reserved-note ul li a{
+    color: #462802;
+    text-decoration: none;
+}
+.reservation-list .reserved-note .resevation-note-contact p:nth-child(1){
+    width: 100%;
+    font: 400 16px 'roboto';
+    margin-bottom: 10px;
+}
+.reservation-list .reserved-note .resevation-note-contact .motivate-note{
+    width: 100%;
+    font: 400 18px 'roboto';
+    margin-bottom: 10px;
+}
+.reservation-hours h2{
+    width: 100%;
+    font: 800 20px 'roboto',sans-serif;
+    text-transform: uppercase;
+    color: green;
+    letter-spacing: 1px;
+}
+
+.reserved-form{
+    width: 40%;
+    background: white;
+    align-self: center;
+    padding: 10px;
+}
+.reserved-form .form-reservation-title{
+    text-align: center;
+    width: 100%;
+    font: 800 20px 'roboto',sans-serif;
+    text-transform: uppercase;
+    color: green;
+    letter-spacing: 1px;
+}
+.reserved-form form{
+    width: 100%;
+}
+.reserved-form form .name-section{
+    width: 90%;
+}
+.reserved-form form .name-section .first-name input[type = text], .reserved-form form .name-section .other-name input[type = text]{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font: 600 16px 'roboto',sans-serif;
+}
+.reserved-form form .email-section input[type = email]{
+    width: 90%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font: 600 16px 'roboto',sans-serif;
+}
+.reserved-form form .tel-sit input[type = tel]{
+    width: 90%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font: 600 16px 'roboto',sans-serif;
+}
+.reserved-form form .tel-sit input[type = number]{
+    width: 90%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font: 600 16px 'roboto',sans-serif;
+}
+.reserved-form form input[type = submit]{
+    margin-top: 20px;
+    width: 90%;
+    height: 30px;
+    font: 500 16px 'roboto',sans-serif;
+    text-transform: uppercase;
+    background: #ffaaaa;
+    border: none;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.reserved-form form input[type = submit]:hover{
+    background: #bab5b5;
+}
+.reserved-form form label{
+    font: 500 18px 'roboto',sans-serif;
+}
+/* -----------footer---------- */
+
+footer{
+    background: #1b0f00;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    color: whitesmoke;
+    padding-bottom: 10px;
+    position: relative;
+}
+.first-footer-section h3{
+    color: green;
+    font: 600 20px 'roboto',sans-serif;
+    margin: 30px 0 20px 10px;
+}
+.first-footer-section p{
+    margin: 10px 0 10px 10px;
+}
+.first-footer-section p a{
+    color: whitesmoke;
+    text-decoration: none;
+    font: 600 20px 'roboto',sans-serif;
+    transition: 0.7s ease;
+}
+.first-footer-section p a:hover{
+    color: yellowgreen;
+}
+.first-footer-section ul{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+.first-footer-section ul li{
+    list-style: none;
+    margin-left: 10px;
+    transition: 0.7s ease;
+}
+.first-footer-section ul li a{
+    text-decoration: none;
+}
+.first-footer-section ul li:hover{
+    transform: translateY(-5px);
+}
+
+.second-footer-section h3{
+    color: green;
+    font: 600 25px 'roboto',sans-serif;
+    margin: 30px 0 0px 10px;
+}
+.second-footer-section ul{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.second-footer-section ul li{
+    margin-top: 10px;
+    list-style: none;
+}
+.second-footer-section ul li:nth-child(1){
+    margin-top: 30px;
+}
+.second-footer-section ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font: 600 16px 'roboto',sans-serif;
+    transition: 0.7s ease;
+}
+.second-footer-section ul li a:hover{
+    color: yellowgreen;
+}
+
+
+.third-footer-section h3{
+    color: green;
+    font: 600 25px 'roboto',sans-serif;
+    margin: 30px 0 0px 10px;
+}
+.third-footer-section ul{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.third-footer-section ul li{
+    margin-top: 10px;
+    list-style: none;
+}
+.third-footer-section ul li:nth-child(1){
+    margin-top: 30px;
+}
+.third-footer-section ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font: 600 16px 'roboto',sans-serif;
+    transition: 0.7s ease;
+}
+.third-footer-section ul li a:hover{
+    color: yellowgreen;
+}
+
+.fourth-footer-section{
+    margin-right: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    width: 30%;
+}
+.fourth-footer-section h3{
+    font: 600 20px 'poppins',sans-serif;
+    color: green;
+    margin-top: 30px;
+    text-align: center;
+}
+.fourth-footer-section div{
+    margin-top: 10px;
+    width: 100%;
+}
+.fourth-footer-section div input{
+    width: 100%;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0 8px;
+    font: 500 16px 'roboto',sans-serif;
+}
+.fourth-footer-section div button{
+    width: 80%;
+    height: 30px;
+    margin: 10px 0 0 40px;
+    font: 500 16px 'roboto',sans-serif;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: green;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+.fourth-footer-section div button:hover{
+    background: blueviolet;
+}
+.fourth-footer-section span{
+    font: 600 12px 'poppins', sans-serif;
+    text-align: center;
+    width: 100%;
+    margin-top: 8px;
+}
+
+
+
+
+
+
+/* -----------Responsive-design--------------- */
+
+/* ------------Tablet------------ */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    header{
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+    header .bar{
+        display: block;
+    }
+    header nav{
+        position: fixed;
+        left: 0;
+        top: -500px;
+        margin-right: 0px;
+        background: #f5f5f5fa;
+        width: 100%;
+        height: 100vh;
+        z-index: -999;
+        transition: all 0.7s ease;
+    }
+    header nav.active{
+        top: 60px;
+    }
+    header nav ul {
+        justify-content: center;
+        flex-direction: column;
+    }
+    header nav ul li:nth-child(1){
+        margin-top: 20px;
+    }
+    header .bar .bars{
+        background: #1c002c;
+        border-radius: 10px;
+    }
+    .hero-section p{
+        font-size: 60px;
+    }
+   /* ---------------best--meal--sale-------- */
+   .best-meal .best-sale-container .best-sale-item .best-sale-note{
+        width: 80%;
+        margin: 20px auto;
+    }
+    .best-meal .best-sale-container .best-sale-item{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .best-meal .best-sale-container .best-sale-item .best-sale-image img {
+        width: 600px;
+    }
+    /* ------------reservation------------ */
+    .reservation-list {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .reservation-list .reserved-note{
+        width: 80%;
+    }
+    .reserved-form {
+        width: 80%;
+        margin-top: 40px;
+    }
+    /* -----footer-------- */
+    footer{
+        display: grid;
+        grid-template-columns: repeat(3,2fr);
+        justify-items: center;
+    }
+    .first-footer-section{
+        width: 90%;
+    }
+    .second-footer-section{
+        width: 70%;
+        margin-left: 60px;
+    }
+    .third-footer-section{
+        width: 70%;
+        margin-left: 30px;
+    }
+    .fourth-footer-section{
+        width: 130%;
+        margin: 0px auto;
+        position: relative;
+        left: 80%;
+        top: 0%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+/* -------------Mobile-design---------- */
+@media screen and (max-width: 767px){
+    header{
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        /* background: #1c002c; */
+    }
+    header .logo{
+        margin-left: 10px;
+    }
+    header .logo h1 a{
+        font-size: 25px;
+        color: #1c002c;
+    }
+    header .bar{
+        display: block;
+    }
+    header nav{
+        position: fixed;
+        left: 0;
+        top: -800px;
+        margin-right: 0px;
+        background: #f5f5f5fa;
+        width: 100%;
+        height: 100vh;
+        z-index: -999;
+        transition: all 0.7s ease;
+    }
+    header nav.active{
+        top: 55px;
+    }
+    header nav ul {
+        justify-content: center;
+        flex-direction: column;
+    }
+    header nav ul li:nth-child(1){
+        margin-top: 20px;
+    }
+    header .bar .bars{
+        background: #1c002c;
+        border-radius: 10px;
+    }
+    /* ----------hero----section---- */
+    .hero-section p {
+        padding-left: 30px;
+        margin-left: 0;
+        font-size: 40px;
+        justify-content: center;
+        width: 100%;
+    }
+    /* ---------------best--meal--sale-------- */
+   .best-meal .best-sale-container .best-sale-item .best-sale-note{
+        width: 80%;
+        margin: 20px auto;
+    }
+    .best-meal .best-sale-container .best-sale-item{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .best-meal .best-sale-container .best-sale-item .best-sale-image img {
+        width: 300px;
+    }
+    /* ------------reservation------------ */
+    .reservation-list {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .reservation-list .reserved-note{
+        width: 80%;
+    }
+    .reserved-form {
+        width: 80%;
+        margin-top: 40px;
+    }
+    /* -----footer-------- */
+    footer{
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+    .fourth-footer-section{
+       width: 80%;
+       padding-left: 10px;
+    }
+}
+

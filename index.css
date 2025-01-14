@@ -1,0 +1,823 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: auto;
+    background: url('image/lobby.jpg') no-repeat center / cover #00000097;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+}
+
+header .logo{
+    margin-left: 30px;
+}
+
+header .logo h1 a{
+    color: white;
+    text-decoration: none;
+    font: 500 30px 'poppins', sans-serif;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px;
+}
+header nav {
+    margin-right: 40PX;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+header nav ul li{
+    list-style: none;
+    margin-right: 20px;
+    position: relative;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    transition: 2s ease;
+    font: 500 18px 'roboto';
+}
+header nav ul li a:hover{
+    color: yellowgreen;
+}
+.active-page{
+    color: yellowgreen;
+}
+.active-page::before{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: yellowgreen;
+    position: absolute;
+    bottom: -4px;
+    border-radius: 20px;
+}
+
+ header .bar{
+    display: none;
+    margin-right: 20px;
+}
+header .bar .bars{
+    width: 50px;
+    height: 3px;
+    background: white;
+    display: block;
+    margin-top: 10px;
+    transition: 1s ease;
+    border-radius: 10px;
+}
+header .bar .bars:nth-child(1){
+    margin-top: 0;
+}
+header .bar .bars:nth-child(1).active{
+    transform: translateY(16px) rotate(-40deg);
+}
+header .bar .bars:nth-child(2).active{
+    opacity: 0;
+}
+header .bar .bars:nth-child(3).active{
+    transform: translateY(-10px) rotate(40deg);
+}
+
+/* ------hero-section----- */
+.hero-section{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-container{
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+.hero-container h4{
+    color: whitesmoke;
+    font: 600 60px 'roboto',sans-serif;
+}
+.hero-container p{
+    font: 500 20px 'Alata',sans-serif;
+    color: whitesmoke;
+    margin-top: 20px;
+}
+.hero-container button{
+    margin-top: 30px;
+    padding: 8px 15px;
+    color: black;
+    background: whitesmoke;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font: 500 18px 'roboto';
+    transition: 1s ease;
+}
+.hero-container button:hover{
+    background: #0000008e;
+    color: white;
+}
+
+/* ----about-section----- */
+
+.about{
+    width: 100%;
+    background: whitesmoke;
+    padding: 20px 0;
+}
+.about-container{
+    width: 80%;
+    margin: 20px auto 0;
+    padding: 10px;
+}
+.about-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about-item .about-note{
+    width: 40%;
+}
+.about-item .about-note h3{
+    position: relative;
+    font: 800 30px 'roboto';
+    text-transform: uppercase;
+    color: green;
+    letter-spacing: 1px;
+}
+.about-item .about-note h3::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    border-radius: 20px;
+    background: green;
+}
+.about-item .about-note p{
+    font: 400 18px 'roboto',sans-serif;
+    margin-top: 30px;
+    line-height: 1.5;
+}
+.about-item .about-note button{
+    font: 400 18px 'roboto',sans-serif;
+    margin-top: 30px;
+    background: green;
+    color: whitesmoke;
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+.about-item .about-note button:hover{
+    background: blueviolet;
+    color: whitesmoke;
+    border: none;
+}
+.about-item img{
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+/* ------Amenities-services-------Styling */
+
+.amenities-services{
+    width: 100%;
+    background: white;
+    padding-top: 100px;
+}
+.amenities-services .amenities-services-container{
+    width: 100%;
+}
+.amenities-services-container .header-title{
+    width: 100%;
+}
+.amenities-services-container .header-title h2{
+    text-align: center;
+    font: 800 30px 'roboto',sans-serif;
+    text-transform: uppercase;
+    color: green;
+    letter-spacing: 1px;
+}
+.amenities-services .amenities-services-container .amenities-services-list{
+    width: 80%;
+    margin: 20px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    justify-items: center;
+    gap: 30px;
+}
+.amenities-services .amenities-services-container .amenities-services-list .amenities-services-item{
+    width: 100%;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.7s ease;
+}
+.amenities-services .amenities-services-container .amenities-services-list .amenities-services-item img{
+    width: 100%;
+    object-fit: cover;
+}
+.amenities-services .amenities-services-container .amenities-services-list .amenities-services-item .amenities-serivces-details .amenities-serivces-title{
+    padding: 10px 0;
+    font: 600 18px sans-serif;
+}
+.amenities-services .amenities-services-container .amenities-services-list .amenities-services-item .amenities-serivces-details .amenities-serivces-note{
+    font: 400 16px sans-serif;
+}
+
+.amenities-services .amenities-services-container .amenities-services-list .amenities-services-item:hover{
+    background: white;
+    box-shadow: 1px 1px 10px;
+}
+.see-more-btn{
+    width: 15%;
+    margin: 30px auto 0;
+    padding-bottom: 30px;
+}
+.see-more-btn button{
+    width: 100%;
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: green;
+    color: whitesmoke;
+    font: 500 18px 'roboto',sans-serif;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+.see-more-btn button:hover{
+    background: blueviolet;
+    color: whitesmoke;
+}
+
+/* -------ROOMS---Styles------ */
+
+.rooms-section{
+    width: 100%;
+    background: whitesmoke;
+}
+.rooms-section .header-title{
+    width: 100%;
+    padding: 40px 0 20px;
+}
+.rooms-section .header-title h2{
+    width: 100%;
+    text-align: center;
+    font: 800 30px 'roboto',sans-serif;
+    text-transform: uppercase;
+    color: green;
+    letter-spacing: 1px;
+}
+.rooms-section .rooms-container{
+    width: 80%;
+    margin: 20px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3 ,2fr);
+    gap: 30px;
+}
+.rooms-section .rooms-container .room-item{
+    width: 100%;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.rooms-section .rooms-container .room-item .room-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.rooms-section .rooms-container .room-item .room-details{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 10px;
+}
+.rooms-section .rooms-container .room-item .room-details .price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    padding: 10px 0;
+    margin: -25px 0 0;
+    background: whitesmoke;
+}
+.rooms-section .rooms-container .room-item .room-details .price img{
+    width: 30px;
+}
+.rooms-section .rooms-container .room-item .room-details .price span{
+    font: 600 18px 'roboto',sans-serif;
+    color: blueviolet;
+}
+.rooms-section .rooms-container .room-item .room-details .name{
+    font: 600 18px 'poppins',sans-serif;
+}
+.rooms-section .rooms-container .room-item .room-details button{
+    padding: 8px 15px;
+    font: 600 16px 'poppins',sans-serif;
+    transition: 0.7s ease;
+    background: #f2f1f1;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.rooms-section .rooms-container .room-item .room-details button:hover{
+    background: #d6d6d6;
+}
+.view-accomodation-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+.view-more-accomadation{
+    padding: 8px 15px;
+    font: 600 18px 'roboto',sans-serif;
+    cursor: pointer;
+    background: green;
+    color: whitesmoke;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    transition: 0.7s ease;
+}
+.view-more-accomadation:hover{
+    background: blueviolet;
+}
+
+/* -----------------testimonial-section---------- */
+.Testimonial{
+    text-align: center;
+    font: 800 40px 'roboto',sans-serif;
+    color: green;
+    padding-top: 90px;
+    background: white;
+}
+.testimonial-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.testimonial-container{
+    width: 100%;
+    overflow-x: hidden;
+}
+.testimonialItem-item {
+    width: 1000px;
+    position: relative;
+}
+.testimonial-item{
+    background: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    height: 900px;
+}
+.testimonial-item img{
+    border-radius: 50%;
+    object-fit: cover;
+    background: whitesmoke;
+    padding: 5px;
+    margin: 10px auto;
+}
+.image-container{
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.testimonial-details{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 30px auto;
+}
+.testimonial-note{
+    font: 400 16px 'poppins',sans-serif;
+}
+.testimonial-name{
+    margin-top: 30px;
+    text-transform: uppercase;
+    font: 600 18px 'poppins';
+}
+#pagination-bullet .swiper-pagination-bullet {
+    background-color: green; 
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+}
+#pagination-bullet .swiper-pagination-bullet-active {
+    background-color: blue;
+}
+.swiper-button-prev{
+    margin-left: 30px;
+}
+.swiper-button-next{
+    margin-right: 30px;
+}
+
+/* ----------upcoming-event---------- */
+.upcoming-event{
+    width: 100%;
+    background: #0000008d;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.upcoming-event .event-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.upcoming-event .event-container h3{
+    color: whitesmoke;
+    font: 700 40px 'roboto',sans-serif;
+}
+.upcoming-event .event-container button{
+    padding: 8px 15px;
+    background: green;
+    color: whitesmoke;
+    font: 600 18px 'roboto',sans-serif;
+    margin-top: 20px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+.upcoming-event .event-container button:hover{
+    background: transparent;
+    border: 2px solid green;
+}
+
+/* -----------footer---------- */
+
+footer{
+    background: #1c002c;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    color: whitesmoke;
+    padding-bottom: 10px;
+    position: relative;
+}
+.first-footer-section h3{
+    color: green;
+    font: 600 20px 'roboto',sans-serif;
+    margin: 30px 0 20px 10px;
+}
+.first-footer-section p{
+    margin: 10px 0 10px 10px;
+}
+.first-footer-section p a{
+    color: whitesmoke;
+    text-decoration: none;
+    font: 600 20px 'roboto',sans-serif;
+    transition: 0.7s ease;
+}
+.first-footer-section p a:hover{
+    color: yellowgreen;
+}
+.first-footer-section ul{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+.first-footer-section ul li{
+    list-style: none;
+    margin-left: 10px;
+    transition: 0.7s ease;
+}
+.first-footer-section ul li a{
+    text-decoration: none;
+}
+.first-footer-section ul li:hover{
+    transform: translateY(-5px);
+}
+
+.second-footer-section h3{
+    color: green;
+    font: 600 25px 'roboto',sans-serif;
+    margin: 30px 0 0px 10px;
+}
+.second-footer-section ul{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.second-footer-section ul li{
+    margin-top: 10px;
+    list-style: none;
+}
+.second-footer-section ul li:nth-child(1){
+    margin-top: 30px;
+}
+.second-footer-section ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font: 600 16px 'roboto',sans-serif;
+    transition: 0.7s ease;
+}
+.second-footer-section ul li a:hover{
+    color: yellowgreen;
+}
+
+
+.third-footer-section h3{
+    color: green;
+    font: 600 25px 'roboto',sans-serif;
+    margin: 30px 0 0px 10px;
+}
+.third-footer-section ul{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.third-footer-section ul li{
+    margin-top: 10px;
+    list-style: none;
+}
+.third-footer-section ul li:nth-child(1){
+    margin-top: 30px;
+}
+.third-footer-section ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font: 600 16px 'roboto',sans-serif;
+    transition: 0.7s ease;
+}
+.third-footer-section ul li a:hover{
+    color: yellowgreen;
+}
+
+.fourth-footer-section{
+    margin-right: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    width: 30%;
+}
+.fourth-footer-section h3{
+    font: 600 20px 'poppins',sans-serif;
+    color: green;
+    margin-top: 30px;
+    text-align: center;
+}
+.fourth-footer-section div{
+    margin-top: 10px;
+    width: 100%;
+}
+.fourth-footer-section div input{
+    width: 100%;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0 8px;
+    font: 500 16px 'roboto',sans-serif;
+}
+.fourth-footer-section div button{
+    width: 80%;
+    height: 30px;
+    margin: 10px 0 0 40px;
+    font: 500 16px 'roboto',sans-serif;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: green;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+.fourth-footer-section div button:hover{
+    background: blueviolet;
+}
+.fourth-footer-section span{
+    font: 600 12px 'poppins', sans-serif;
+    text-align: center;
+    width: 100%;
+    margin-top: 8px;
+}
+
+
+/* -----------Responsive-design--------------- */
+
+/* ------------Tablet------------ */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    header{
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background: #1c002c;
+    }
+    header .bar{
+        display: block;
+    }
+    header nav{
+        position: fixed;
+        left: 0;
+        top: -500px;
+        margin-right: 0px;
+        background: #11001bee;
+        width: 100%;
+        height: 100vh;
+        z-index: -999;
+        transition: all 0.7s ease;
+    }
+    header nav.active{
+        top: 60px;
+    }
+    header nav ul {
+        justify-content: center;
+        flex-direction: column;
+    }
+    header nav ul li:nth-child(1){
+        margin-top: 20px;
+    }
+
+    /* -------------About----------*/
+    .about-item{
+        flex-direction: column-reverse;
+    }
+    .about-item img {
+        width: 600px;
+    }
+    .about-item .about-note{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .about-item .about-note h3::after {
+        width: 35%;
+    }
+    /* ------------services and amenities----------- */
+    .amenities-services .amenities-services-container .amenities-services-list{
+        grid-template-columns: repeat(2,3fr);
+    }
+    .see-more-btn{
+        width: 25%;
+    }
+    /* -----------rooms--------------- */
+    .rooms-section .rooms-container{
+        grid-template-columns: repeat(2 ,3fr);
+    }
+    /* -----footer-------- */
+    footer{
+        display: grid;
+        grid-template-columns: repeat(3,2fr);
+        justify-items: center;
+    }
+    .first-footer-section{
+        width: 90%;
+    }
+    .second-footer-section{
+        width: 70%;
+        margin-left: 60px;
+    }
+    .third-footer-section{
+        width: 70%;
+        margin-left: 30px;
+    }
+    .fourth-footer-section{
+        width: 130%;
+        margin: 0px auto;
+        position: relative;
+        left: 80%;
+        top: 0%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+/* -------------Mobile-design---------- */
+@media screen and (max-width: 767px){
+    header{
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background: #1c002c;
+    }
+    header .logo{
+        margin-left: 10px;
+    }
+    header .logo h1 a{
+        font-size: 30px;
+    }
+    header .bar{
+        display: block;
+    }
+    header nav{
+        position: fixed;
+        left: 0;
+        top: -800px;
+        margin-right: 0px;
+        background: #11001bee;
+        width: 100%;
+        height: 100vh;
+        z-index: -999;
+        transition: all 0.7s ease;
+    }
+    header nav.active{
+        top: 60px;
+    }
+    header nav ul {
+        justify-content: center;
+        flex-direction: column;
+    }
+    header nav ul li:nth-child(1){
+        margin-top: 20px;
+    }
+    /* ----------hero----section---- */
+    .hero-container h4 {
+        font: 600 40px 'roboto',sans-serif;
+    }
+    /* -------------About----------*/
+    .about-item{
+        flex-direction: column-reverse;
+    }
+    .about-item img {
+        width: 300px;
+    }
+    .about-item .about-note{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .about-item .about-note h3::after {
+        width: 60%;
+    }
+    /* ------------services and amenities----------- */
+    .amenities-services .amenities-services-container .amenities-services-list{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .see-more-btn{
+        width: 45%;
+    }
+    /* -----------rooms--------------- */
+    .rooms-section .rooms-container{
+        grid-template-columns: repeat(1 ,1fr);
+    }
+    /* --------------banner------ */
+    .upcoming-event .event-container h3 {
+        font: 700 30px 'roboto',sans-serif;
+        text-align: center;
+    }
+    /* -----footer-------- */
+    footer{
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+    .fourth-footer-section{
+       width: 80%;
+       padding-left: 10px;
+    }
+}
+
